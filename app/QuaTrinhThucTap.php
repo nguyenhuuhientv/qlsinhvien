@@ -16,7 +16,7 @@ class QuaTrinhThucTap extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['MaSinhVien', 'MaThucTap', 'NgayThucTap', 'KinhDoSang', 'ViDoSang', 'ThoiGianSang', 'KinhDoChieu', 'ViDoChieu', 'ThoiGianChieu'];
+	protected $fillable = ['MaSinhVien', 'MaThucTap', 'NgayThucTap', 'KinhDoSang', 'ViDoSang', 'ThoiGianSang', 'GhiChuSang', 'KinhDoChieu', 'ViDoChieu', 'ThoiGianChieu','GhiChuChieu'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.

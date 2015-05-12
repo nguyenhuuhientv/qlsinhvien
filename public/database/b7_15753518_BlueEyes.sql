@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql108.byetcluster.com
--- Generation Time: May 11, 2015 at 10:12 AM
+-- Generation Time: May 12, 2015 at 10:59 AM
 -- Server version: 5.6.22-71.0
 -- PHP Version: 5.3.3
 
@@ -105,7 +105,14 @@ CREATE TABLE IF NOT EXISTS `Nganh` (
   `TenNganh` varchar(254) CHARACTER SET utf8 DEFAULT NULL,
   `MaKhoa` int(11) DEFAULT NULL,
   PRIMARY KEY (`idNganh`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `Nganh`
+--
+
+INSERT INTO `Nganh` (`idNganh`, `TenNganh`, `MaKhoa`) VALUES
+(1, 'Kỹ Thuật Phần Mềm', 1);
 
 -- --------------------------------------------------------
 
@@ -121,9 +128,11 @@ CREATE TABLE IF NOT EXISTS `QuaTrinhThucTap` (
   `KinhDoSang` text,
   `ViDoSang` text,
   `ThoiGianSang` time DEFAULT NULL,
+  `GhiChuSang` text CHARACTER SET utf8,
   `KinhDoChieu` text,
   `ViDoChieu` text,
   `ThoiGianChieu` time DEFAULT NULL,
+  `GhiChuChieu` text CHARACTER SET utf8,
   PRIMARY KEY (`idQTTT`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=38 ;
 
@@ -131,14 +140,14 @@ CREATE TABLE IF NOT EXISTS `QuaTrinhThucTap` (
 -- Dumping data for table `QuaTrinhThucTap`
 --
 
-INSERT INTO `QuaTrinhThucTap` (`idQTTT`, `MaSinhVien`, `MaThucTap`, `NgayThucTap`, `KinhDoSang`, `ViDoSang`, `ThoiGianSang`, `KinhDoChieu`, `ViDoChieu`, `ThoiGianChieu`) VALUES
-(1, 1, NULL, '2015-04-29', '10.7324566', '106.672355', '09:25:23', '10.7324566', '106.672355', '14:25:23'),
-(2, 1, NULL, '2015-04-30', '10.7324566', '106.672355', '09:25:23', '10.7324566', '106.672355', '14:25:23'),
-(8, 0, NULL, '2015-04-30', '10.77594946', '106.67409718', '09:02:48', NULL, NULL, NULL),
-(37, 1, NULL, '2015-05-04', NULL, NULL, NULL, NULL, NULL, NULL),
-(36, 1, NULL, '2015-05-03', NULL, NULL, NULL, NULL, NULL, NULL),
-(35, 0, NULL, '2015-05-02', NULL, NULL, NULL, NULL, NULL, NULL),
-(34, 1, NULL, '2015-05-01', NULL, NULL, NULL, '10.7329481', '106.6724981', '14:26:26');
+INSERT INTO `QuaTrinhThucTap` (`idQTTT`, `MaSinhVien`, `MaThucTap`, `NgayThucTap`, `KinhDoSang`, `ViDoSang`, `ThoiGianSang`, `GhiChuSang`, `KinhDoChieu`, `ViDoChieu`, `ThoiGianChieu`, `GhiChuChieu`) VALUES
+(1, 1, NULL, '2015-04-29', '10.7324566', '106.672355', '09:25:23', NULL, '10.7324566', '106.672355', '14:25:23', NULL),
+(2, 1, NULL, '2015-04-30', '10.7324566', '106.672355', '09:25:23', NULL, '10.7324566', '106.672355', '14:25:23', NULL),
+(8, 0, NULL, '2015-04-30', '10.77594946', '106.67409718', '09:02:48', NULL, NULL, NULL, NULL, NULL),
+(37, 1, NULL, '2015-05-04', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(36, 1, NULL, '2015-05-03', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(35, 0, NULL, '2015-05-02', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(34, 1, NULL, '2015-05-01', NULL, NULL, NULL, NULL, '10.7329481', '106.6724981', '14:26:26', NULL);
 
 -- --------------------------------------------------------
 
@@ -173,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `SinhVien` (
 
 INSERT INTO `SinhVien` (`id`, `HoTen`, `DiaChi`, `QuanHuyen`, `TinhTP`, `Email`, `GioiTinh`, `MSSV`, `Password`, `KeyID`, `SDT`, `DanToc`, `NgaySinh`, `NoiSinh`, `MaLop`, `MaLoaiHinh`, `Avatar`) VALUES
 (1, '', '', '', '', '', 0, 123, '123', '', '', '', '0000-00-01', '', 0, 0, NULL),
-(2, 'Dương Chí Hoàng', 'C3/26H', 'Bình Hưng', 'Bình Chánh', 'hchihoang@gmail.com', 0, 1, '12', '353836067805663', '01653158426', '', '1993-11-05', '', 1, 0, 'http://hchihoang.byethost7.com/BlueEyes/uploads/IMG_7676633533846.jpeg');
+(2, 'Dương Chí Hoàng', 'C3/26H Phạm Hùng', 'Bình Hưng', 'Bình Chánh', 'hchihoang@gmail.com', 0, 1, '12', '353836067805663', '01653158426', '', '1993-11-05', '', 1, 0, 'http://hchihoang.byethost7.com/BlueEyes/uploads/IMG_7676633533846.jpeg');
 
 -- --------------------------------------------------------
 
@@ -203,7 +212,7 @@ CREATE TABLE IF NOT EXISTS `ThongBao` (
   `NgayDang` date DEFAULT NULL,
   `Khoa` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `ThongBao`
@@ -211,7 +220,9 @@ CREATE TABLE IF NOT EXISTS `ThongBao` (
 
 INSERT INTO `ThongBao` (`id`, `TieuDe`, `NoiDung`, `NgayDang`, `Khoa`) VALUES
 (1, 'Nộp báo cáo thực tập', 'Nộp báo cáo thực tập ngày 23/3/2015', '2015-01-01', 1),
-(2, 'Nộp báo cáo tốt nghiệp', 'Hạn chót nộp báo cáo tốt nghiệp là ngày 23/4/2015', '2015-01-01', 1);
+(2, 'Nộp báo cáo tốt nghiệp', 'Hạn chót nộp báo cáo tốt nghiệp là ngày 23/4/2015', '2015-01-01', 1),
+(3, 'test', 'abc', '2015-05-11', 2),
+(4, 'test', 'abc', '2015-05-11', 2);
 
 -- --------------------------------------------------------
 
