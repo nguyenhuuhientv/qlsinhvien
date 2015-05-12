@@ -2,21 +2,21 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Khoa extends Model {
+class ThongBao extends Model {
 
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'thongbao';
+	protected $table = 'ThongBao';
 
 	/**
 	 * The attributes that are mass assignable.
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['TenKhoa'];
+	protected $fillable = ['TieuDe', 'NoiDung', 'NgayDang', 'Khoa'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.

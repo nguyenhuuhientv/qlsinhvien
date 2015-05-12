@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Khoa extends Model {
+class ThoiGianThucTap extends Model {
 
 	/**
 	 * The database table used by the model.
@@ -16,7 +16,7 @@ class Khoa extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['TenKhoa'];
+	protected $fillable = ['MaKhoa', 'NamThucTap', 'NgayBatDau', 'NgayKetThuc'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
