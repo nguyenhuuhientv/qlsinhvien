@@ -6,6 +6,6 @@ class GiaoVien extends Model {
 
 	protected $table = 'giaovien';
 
-	protected $fillable = ['TenKhoa'];
+	protected $fillable = ['TaiKhoan', 'MatKhau', 'HoTen', 'DiaChi', 'Email', 'DienThoai', 'GioiTinh', 'ChucVu', 'MaKhoa'];
 
 }
