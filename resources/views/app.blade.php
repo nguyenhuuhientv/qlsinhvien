@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Laravel</title>
+	<title>Quản Lí Quá Trình Thực Tập Sinh Viên</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
@@ -28,12 +28,22 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Laravel</a>
+				<a class="navbar-brand" href="#">Thực Tập</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="{{ url('/') }}">Home</a></li>
+					<li><a href="{{URL::route("khoa.index")}}">Giáo Viên</a></li>
+					<li><a href="{{URL::route("khoa.index")}}">Khoa</a></li>
+					<li><a href="{{URL::route("khoa.index")}}">Loại Hình Đạo Tạo</a></li>
+					<li><a href="{{URL::route("khoa.index")}}">Lớp</a></li>
+					<li><a href="{{URL::route("khoa.index")}}">Ngành</a></li>
+					<li><a href="{{URL::route("khoa.index")}}">Quá Trình Thực Tập</a></li>
+					<li><a href="{{URL::route("khoa.index")}}">Sinh Viên</a></li>
+					<li><a href="{{URL::route("khoa.index")}}">Thời Gian Thực Tập</a></li>
+					<li><a href="{{URL::route("khoa.index")}}">Thông Báo</a></li>
+					<li><a href="{{URL::route("khoa.index")}}">Thực Tập</a></li>
+					<li><a href="{{URL::route("khoa.index")}}">User</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
