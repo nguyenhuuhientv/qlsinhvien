@@ -29,8 +29,8 @@
 							<td>{{$item->ThoiGianChieu}}</td>
 							<td>{{$item->GhiChuChieu}}</td>
 							<th>
-								<a href="$item->idKhoa">Sửa</a> | 
-								<a href="$item->idKhoa">Xóa</a>
+								<a href="{{URL::route("quatrinhthuctap.update", $item->idQTTT)}}">Sửa</a> | 
+								<a href="{{URL::route("quatrinhthuctap.delete", $item->idQTTT)}}">Xóa</a>
 							</th>
 						</tr>
 						@endforeach

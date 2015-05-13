@@ -1,0 +1,32 @@
+<?php $__env->startSection('content'); ?>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">Quản lí sinh vien</div>
+
+				<div class="panel-body">
+					<table class="table">
+						<tr>
+							<th>ID Khoa</th>
+							<th>Tên Khoa</th>
+							<th>Thao Tác</th>
+						</tr>
+						<?php foreach($list as $item): ?>
+						<tr>
+							<td><?php echo e($item->idKhoa); ?></td>
+							<td><?php echo e($item->TenKhoa); ?></td>
+							<th>
+								<a href="$item->idKhoa">Sửa</a> | 
+								<a href="$item->idKhoa">Xóa</a>
+							</th>
+						</tr>
+						<?php endforeach; ?>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
