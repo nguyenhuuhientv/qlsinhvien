@@ -20,6 +20,10 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::get('/khoa', function() {
-	var_dump(\App\Khoa::all());
+Route::group(array('prefix'=>'khoa'), function () {
+	Route::get('/', array('as'=>'khoa.index', 'uses'=>'KhoaController@index'));
+
+	Route::any('/create', array('as'=>'khoa.create', 'uses'=>'KhoaController@create'));
+	Route::any('/update/{id}', array('as'=>'khoa.update', 'uses'=>'KhoaController@update'));
+	Route::any('/delete/{id}', array('as'=>'khoa.delete', 'uses'=>'KhoaController@delete'));
 });
