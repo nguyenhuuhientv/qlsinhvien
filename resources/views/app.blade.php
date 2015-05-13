@@ -33,17 +33,17 @@
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="{{URL::route("khoa.index")}}">Giáo Viên</a></li>
+					<li><a href="{{URL::route("giaovien.index")}}">Giáo Viên</a></li>
 					<li><a href="{{URL::route("khoa.index")}}">Khoa</a></li>
-					<li><a href="{{URL::route("khoa.index")}}">Loại Hình Đạo Tạo</a></li>
-					<li><a href="{{URL::route("khoa.index")}}">Lớp</a></li>
-					<li><a href="{{URL::route("khoa.index")}}">Ngành</a></li>
-					<li><a href="{{URL::route("khoa.index")}}">Quá Trình Thực Tập</a></li>
-					<li><a href="{{URL::route("khoa.index")}}">Sinh Viên</a></li>
-					<li><a href="{{URL::route("khoa.index")}}">Thời Gian Thực Tập</a></li>
-					<li><a href="{{URL::route("khoa.index")}}">Thông Báo</a></li>
-					<li><a href="{{URL::route("khoa.index")}}">Thực Tập</a></li>
-					<li><a href="{{URL::route("khoa.index")}}">User</a></li>
+					<li><a href="{{URL::route("loaihinhdaotao.index")}}">Loại Hình Đạo Tạo</a></li>
+					<li><a href="{{URL::route("lop.index")}}">Lớp</a></li>
+					<li><a href="{{URL::route("nganh.index")}}">Ngành</a></li>
+					<li><a href="{{URL::route("quatrinhthuctap.index")}}">Quá Trình Thực Tập</a></li>
+					<li><a href="{{URL::route("sinhvien.index")}}">Sinh Viên</a></li>
+					<li><a href="{{URL::route("thoigianthuctap.index")}}">Thời Gian Thực Tập</a></li>
+					<li><a href="{{URL::route("thongbao.index")}}">Thông Báo</a></li>
+					<li><a href="{{URL::route("thuctap.index")}}">Thực Tập</a></li>
+					<li><a href="{{URL::route("user.index")}}">User</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">

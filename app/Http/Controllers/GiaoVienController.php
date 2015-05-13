@@ -30,7 +30,7 @@ class giaovienController extends Controller {
 	 */
 	public function index()
 	{
-		return view('giaovien.index')->with("list", \App\giaovien::get());
+		return view('giaovien.index')->with("list", \App\GiaoVien::get());
 	}
 
 	public function create()

@@ -30,7 +30,7 @@ class lopController extends Controller {
 	 */
 	public function index()
 	{
-		return view('lop.index')->with("list", \App\lop::get());
+		return view('lop.index')->with("list", \App\Lop::get());
 	}
 
 	public function create()

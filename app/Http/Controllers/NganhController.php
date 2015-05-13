@@ -30,7 +30,7 @@ class nganhController extends Controller {
 	 */
 	public function index()
 	{
-		return view('nganh.index')->with("list", \App\nganh::get());
+		return view('nganh.index')->with("list", \App\Nganh::get());
 	}
 
 	public function create()

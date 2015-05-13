@@ -30,7 +30,7 @@ class thoigianthuctaoController extends Controller {
 	 */
 	public function index()
 	{
-		return view('thoigianthuctao.index')->with("list", \App\thoigianthuctao::get());
+		return view('thoigianthuctao.index')->with("list", \App\ThoiGianThucTap::get());
 	}
 
 	public function create()

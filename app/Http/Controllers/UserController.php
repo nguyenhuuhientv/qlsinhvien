@@ -30,7 +30,7 @@ class userController extends Controller {
 	 */
 	public function index()
 	{
-		return view('user.index')->with("list", \App\user::get());
+		return view('user.index')->with("list", \App\User::get());
 	}
 
 	public function create()

@@ -30,7 +30,7 @@ class thongbaoController extends Controller {
 	 */
 	public function index()
 	{
-		return view('thongbao.index')->with("list", \App\thongbao::get());
+		return view('thongbao.index')->with("list", \App\ThongBao::get());
 	}
 
 	public function create()

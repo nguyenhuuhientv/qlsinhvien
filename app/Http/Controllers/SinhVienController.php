@@ -30,7 +30,7 @@ class sinhvienController extends Controller {
 	 */
 	public function index()
 	{
-		return view('sinhvien.index')->with("list", \App\sinhvien::get());
+		return view('sinhvien.index')->with("list", \App\SinhVien::get());
 	}
 
 	public function create()

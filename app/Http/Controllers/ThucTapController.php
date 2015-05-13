@@ -30,7 +30,7 @@ class thuctapController extends Controller {
 	 */
 	public function index()
 	{
-		return view('thuctap.index')->with("list", \App\thuctap::get());
+		return view('thuctap.index')->with("list", \App\ThucTap::get());
 	}
 
 	public function create()

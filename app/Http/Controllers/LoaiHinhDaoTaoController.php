@@ -30,7 +30,7 @@ class loaihinhdaotaoController extends Controller {
 	 */
 	public function index()
 	{
-		return view('loaihinhdaotao.index')->with("list", \App\loaihinhdaotao::get());
+		return view('loaihinhdaotao.index')->with("list", \App\LoaiHinhDaoTao::get());
 	}
 
 	public function create()

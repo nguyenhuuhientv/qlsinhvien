@@ -30,7 +30,7 @@ class quatrinhthuctapController extends Controller {
 	 */
 	public function index()
 	{
-		return view('quatrinhthuctap.index')->with("list", \App\quatrinhthuctap::get());
+		return view('quatrinhthuctap.index')->with("list", \App\QuaTrinhThucTap::get());
 	}
 
 	public function create()
