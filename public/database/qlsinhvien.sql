@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 13, 2015 at 11:18 AM
+-- Generation Time: May 13, 2015 at 11:27 AM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -153,21 +153,23 @@ CREATE TABLE IF NOT EXISTS `quatrinhthuctap` (
   `ThoiGianSang` time DEFAULT NULL,
   `KinhDoChieu` text,
   `ViDoChieu` text,
-  `ThoiGianChieu` time DEFAULT NULL
+  `ThoiGianChieu` time DEFAULT NULL,
+  `GhiChuSang` text,
+  `GhiChuChieu` text
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=38 ;
 
 --
 -- Dumping data for table `quatrinhthuctap`
 --
 
-INSERT INTO `quatrinhthuctap` (`idQTTT`, `MaSinhVien`, `MaThucTap`, `NgayThucTap`, `KinhDoSang`, `ViDoSang`, `ThoiGianSang`, `KinhDoChieu`, `ViDoChieu`, `ThoiGianChieu`) VALUES
-(1, 1, NULL, '2015-04-29', '10.7324566', '106.672355', '09:25:23', '10.7324566', '106.672355', '14:25:23'),
-(2, 1, NULL, '2015-04-30', '10.7324566', '106.672355', '09:25:23', '10.7324566', '106.672355', '14:25:23'),
-(8, 0, NULL, '2015-04-30', '10.77594946', '106.67409718', '09:02:48', NULL, NULL, NULL),
-(37, 1, NULL, '2015-05-04', NULL, NULL, NULL, NULL, NULL, NULL),
-(36, 1, NULL, '2015-05-03', NULL, NULL, NULL, NULL, NULL, NULL),
-(35, 0, NULL, '2015-05-02', NULL, NULL, NULL, NULL, NULL, NULL),
-(34, 1, NULL, '2015-05-01', NULL, NULL, NULL, '10.7329481', '106.6724981', '14:26:26');
+INSERT INTO `quatrinhthuctap` (`idQTTT`, `MaSinhVien`, `MaThucTap`, `NgayThucTap`, `KinhDoSang`, `ViDoSang`, `ThoiGianSang`, `KinhDoChieu`, `ViDoChieu`, `ThoiGianChieu`, `GhiChuSang`, `GhiChuChieu`) VALUES
+(1, 1, NULL, '2015-04-29', '10.7324566', '106.672355', '09:25:23', '10.7324566', '106.672355', '14:25:23', NULL, NULL),
+(2, 1, NULL, '2015-04-30', '10.7324566', '106.672355', '09:25:23', '10.7324566', '106.672355', '14:25:23', NULL, NULL),
+(8, 0, NULL, '2015-04-30', '10.77594946', '106.67409718', '09:02:48', NULL, NULL, NULL, NULL, NULL),
+(37, 1, NULL, '2015-05-04', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(36, 1, NULL, '2015-05-03', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(35, 0, NULL, '2015-05-02', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(34, 1, NULL, '2015-05-01', NULL, NULL, NULL, '10.7329481', '106.6724981', '14:26:26', NULL, NULL);
 
 -- --------------------------------------------------------
 
