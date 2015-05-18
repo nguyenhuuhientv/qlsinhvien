@@ -23,5 +23,7 @@ class SinhVien extends Model {
 	 *
 	 * @var array
 	 */
-
+	public function QuaTrinhThucTap() {
+		return $this->hasMany("QuaTrinhThucTap", "MaSinhVien");
+	}
 }

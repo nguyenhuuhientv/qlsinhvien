@@ -8,17 +8,17 @@
 				<div class="panel-body">
 					<table class="table">
 						<tr>
-							<th>ID Khoa</th>
-							<th>Tên Khoa</th>
+							<th>ID Ngành</th>
+							<th>Tên Ngành</th>
 							<th>Thao Tác</th>
 						</tr>
 						<?php foreach($list as $item): ?>
 						<tr>
-							<td><?php echo e($item->idKhoa); ?></td>
-							<td><?php echo e($item->TenKhoa); ?></td>
+							<td><?php echo e($item->idNganh); ?></td>
+							<td><?php echo e($item->TenNganh); ?></td>
 							<th>
-								<a href="$item->idKhoa">Sửa</a> | 
-								<a href="$item->idKhoa">Xóa</a>
+								<a href="$item->idNganh">Sửa</a> | 
+								<a href="$item->idNganh">Xóa</a>
 							</th>
 						</tr>
 						<?php endforeach; ?>

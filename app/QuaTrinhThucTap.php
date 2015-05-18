@@ -23,5 +23,7 @@ class QuaTrinhThucTap extends Model {
 	 *
 	 * @var array
 	 */
-
+	public function SinhVien() {
+		return $this->beLongsTo("\App\SinhVien", "MaSinhVien");
+	}
 }

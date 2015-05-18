@@ -8,17 +8,37 @@
 				<div class="panel-body">
 					<table class="table">
 						<tr>
-							<th>ID Khoa</th>
-							<th>Tên Khoa</th>
+							<th>ID</th>	
+							<th>Tên Sinh Viên</th>
+							<th>Địa Chỉ</th>
+							<th>Quận/Huyện</th>
+							<th>Tỉnh/Thành Phố</th>							
+							<th>Email</th>
+							<th>Giới Tính</th>
+							<th>MSSV</th>
+							<th>SĐT</th>
+							<th>Dân Tộc</th>
+							<th>Ngày Sinh</th>	
+							<th>Nơi Sinh</th>							
 							<th>Thao Tác</th>
 						</tr>
 						<?php foreach($list as $item): ?>
 						<tr>
-							<td><?php echo e($item->idKhoa); ?></td>
-							<td><?php echo e($item->TenKhoa); ?></td>
+							<td><?php echo e($item->id); ?></td>
+							<td><?php echo e($item->HoTen); ?></td>
+							<td><?php echo e($item->DiaChi); ?></td>
+							<td><?php echo e($item->QuanHuyen); ?></td>
+							<td><?php echo e($item->TinhTP); ?></td>
+							<td><?php echo e($item->Email); ?></td>
+							<td><?php echo e($item->GioiTinh); ?></td>
+							<td><?php echo e($item->MSSV); ?></td>
+							<td><?php echo e($item->SDT); ?></td>
+							<td><?php echo e($item->DanToc); ?></td>
+							<td><?php echo e($item->NgaySinh); ?></td>
+							<td><?php echo e($item->NoiSinh); ?></td>
 							<th>
-								<a href="$item->idKhoa">Sửa</a> | 
-								<a href="$item->idKhoa">Xóa</a>
+								<a href="$item->id">Sửa</a> | 
+								<a href="$item->id">Xóa</a>
 							</th>
 						</tr>
 						<?php endforeach; ?>

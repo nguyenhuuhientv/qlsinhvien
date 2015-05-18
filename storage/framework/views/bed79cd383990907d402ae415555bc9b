@@ -3,22 +3,22 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="panel panel-default">
-				<div class="panel-heading">Quản lí loại hình đào tạo</div>
+				<div class="panel-heading">Quản lí giảng viên</div>
 
 				<div class="panel-body">
 					<table class="table">
 						<tr>
-							<th>ID Loại Hình Đào Tao</th>
-							<th>Tên Loại Hình Đào Tạo</th>
+							<th>ID Khoa</th>
+							<th>Tên Khoa</th>
 							<th>Thao Tác</th>
 						</tr>
 						<?php foreach($list as $item): ?>
 						<tr>
-							<td><?php echo e($item->idLoaiHinhDaoTao); ?></td>
-							<td><?php echo e($item->TenLoaiHinhDaoTao); ?></td>
+							<td><?php echo e($item->idKhoa); ?></td>
+							<td><?php echo e($item->TenKhoa); ?></td>
 							<th>
-								<a href="$item->idLoaiHinhDaoTao">Sửa</a> | 
-								<a href="$item->idLoaiHinhDaoTao">Xóa</a>
+								<a href="$item->idKhoa">Sửa</a> | 
+								<a href="$item->idKhoa">Xóa</a>
 							</th>
 						</tr>
 						<?php endforeach; ?>

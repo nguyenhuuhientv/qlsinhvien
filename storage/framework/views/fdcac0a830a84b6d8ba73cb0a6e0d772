@@ -6,37 +6,69 @@
 				<div class="panel-heading">Quản lí quá trình thực tập</div>
 
 				<div class="panel-body">
-					<table class="table">
-						<tr>
-							<th>Mã Sinh Viên</th>
-							<th>Mã Thực Tập</th>
-							<th>Ngày Thực Tập</th>
-							<th>Thời Gian Sáng</th>
-							<th>Ghi Chú Sáng</th>
-							<th>Thời Gian Chiều</th>
-							<th>Ghi Chú Chiều</th>
-							<th>Thao Tác</th>
-						</tr>
+					<table class="table" id="example1">
+						<thead>
+                            <tr>
+                                <th>Mã Sinh Viên</th>
+                                <th>Tên Sinh Viên</th>
+								<!-- <th>Mã Thực Tập</th> -->
+								<th>Ngày Thực Tập</th>
+								<th>Điểm Danh Sáng</th>
+								<th>Điểm Danh Chiều</th>
+								<th>Thao Tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 						<?php foreach($list as $item): ?>
 						<tr>
 							<td><?php echo e($item->MaSinhVien); ?></td>
-							<td><?php echo e($item->MaThucTap); ?></td>
+							<td><?php echo e($item->SinhVien->HoTen); ?></td>
+							<!-- <td><?php echo e($item->MaThucTap); ?></td> -->
 							<td><?php echo e($item->NgayThucTap); ?></td>
-							<td><?php echo e($item->ThoiGianSang); ?></td>
-							<td><?php echo e($item->GhiChuSang); ?></td>
-							<td><?php echo e($item->ThoiGianChieu); ?></td>
-							<td><?php echo e($item->GhiChuChieu); ?></td>
+							<td>
+								<?php if($item->ThoiGianSang): ?>
+									<span class="btn btn-info">Có - <?php echo e($item->ThoiGianSang); ?></span>
+								<?php else: ?>
+									<span class="btn btn-danger">Không</span>
+								<?php endif; ?>
+							</td>
+							<td>
+								<?php if($item->ThoiGianChieu): ?>
+									<span class="btn btn-info">Có - <?php echo e($item->ThoiGianChieu); ?></span>
+								<?php else: ?>
+									<span class="btn btn-danger">Không</span>
+								<?php endif; ?>
+							</td>
 							<th>
-								<a href="<?php echo e(URL::route("quatrinhthuctap.update", $item->idQTTT)); ?>">Sửa</a> | 
-								<a href="<?php echo e(URL::route("quatrinhthuctap.delete", $item->idQTTT)); ?>">Xóa</a>
+								<a href="<?php echo e(URL::route("quatrinhthuctap.view", $item->idQTTT)); ?>">Xem Chi Tiết</a>
 							</th>
 						</tr>
 						<?php endforeach; ?>
+					</tbody>
 					</table>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<?php echo HTML::script("template/adminlte/datatables/jquery.dataTables.js"); ?>
+
+<?php echo HTML::script("template/adminlte/datatables/dataTables.bootstrap.js"); ?>
+
+<!-- page script -->
+<script type="text/javascript">
+    $(function() {
+        $("#example1").dataTable();
+        $('#example2').dataTable({
+            "bPaginate": true,
+            "bLengthChange": false,
+            "bFilter": false,
+            "bSort": true,
+            "bInfo": true,
+            "bAutoWidth": false
+        });
+    });
+</script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

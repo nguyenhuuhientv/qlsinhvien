@@ -66,6 +66,8 @@ Route::group(array('prefix'=>'quatrinhthuctap'), function () {
 	Route::any('/create', array('as'=>'quatrinhthuctap.create', 'uses'=>'QuaTrinhThucTapController@create'));
 	Route::any('/update/{id}', array('as'=>'quatrinhthuctap.update', 'uses'=>'QuaTrinhThucTapController@update'));
 	Route::any('/delete/{id}', array('as'=>'quatrinhthuctap.delete', 'uses'=>'QuaTrinhThucTapController@delete'));
+
+	Route::any('/view/{id}', array('as'=>'quatrinhthuctap.view', 'uses'=>'QuaTrinhThucTapController@view'));
 });
 //
 Route::group(array('prefix'=>'sinhvien'), function () {

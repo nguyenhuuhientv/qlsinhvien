@@ -46,5 +46,8 @@ class quatrinhthuctapController extends Controller {
 	public function delete($id)
 	{
 	}
+	public function view($id) {
+		return view('quatrinhthuctap.view')->with("info", \App\QuaTrinhThucTap::where("idQTTT",$id)->first());
+	}
 
 }
