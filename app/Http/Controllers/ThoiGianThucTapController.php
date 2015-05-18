@@ -1,6 +1,6 @@
 <?php namespace App\Http\Controllers;
 
-class thoigianthuctaoController extends Controller {
+class thoigianthuctapController extends Controller {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -30,17 +30,17 @@ class thoigianthuctaoController extends Controller {
 	 */
 	public function index()
 	{
-		return view('thoigianthuctao.index')->with("list", \App\ThoiGianThucTap::get());
+		return view('thoigianthuctap.index')->with("list", \App\ThoiGianThucTap::get());
 	}
 
 	public function create()
 	{
-		return view('thoigianthuctao.create');
+		return view('thoigianthuctap.create');
 	}
 
 	public function update($id)
 	{
-		return view('thoigianthuctao.update');
+		return view('thoigianthuctap.update');
 	}
 
 	public function delete($id)

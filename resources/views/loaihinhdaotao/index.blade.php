@@ -10,17 +10,17 @@
 				<div class="panel-body">
 					<table class="table">
 						<tr>
-							<th>ID Khoa</th>
-							<th>Tên Khoa</th>
+							<th>ID Loại Hình Đào Tao</th>
+							<th>Tên Loại Hình Đào Tạo</th>
 							<th>Thao Tác</th>
 						</tr>
 						@foreach($list as $item)
 						<tr>
-							<td>{{$item->idKhoa}}</td>
-							<td>{{$item->TenKhoa}}</td>
+							<td>{{$item->idLoaiHinhDaoTao}}</td>
+							<td>{{$item->TenLoaiHinhDaoTao}}</td>
 							<th>
-								<a href="$item->idKhoa">Sửa</a> | 
-								<a href="$item->idKhoa">Xóa</a>
+								<a href="$item->idLoaiHinhDaoTao">Sửa</a> | 
+								<a href="$item->idLoaiHinhDaoTao">Xóa</a>
 							</th>
 						</tr>
 						@endforeach
