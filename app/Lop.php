@@ -16,7 +16,7 @@ class Lop extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['TenLop', 'MaNganh', 'MaGVCN', 'LoaiHinhDaoTao'];
+	protected $fillable = ['TenLop', 'MaNganh', 'LoaiHinhDaoTao'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.

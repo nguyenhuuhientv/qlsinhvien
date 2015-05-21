@@ -16,7 +16,7 @@ class SinhVien extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['HoTen', 'DiaChi', 'QuanHuyen', 'TinhTP', 'Email', 'GioiTinh', 'MSSV', 'Password', 'KeyID', 'SDT', 'DanToc', 'NgaySinh', 'NoiSinh', 'MaLop', 'MaLoaiHinh', 'Avatar'];
+	protected $fillable = ['HoTen', 'DiaChi', 'QuanHuyen', 'TinhTP', 'Email', 'GioiTinh', 'MSSV', 'Password', 'KeyID', 'SDT', 'DanToc', 'NgaySinh', 'NoiSinh', 'MaLop', 'Avatar'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.

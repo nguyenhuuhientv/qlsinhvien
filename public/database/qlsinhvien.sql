@@ -2,10 +2,10 @@
 -- version 4.2.7.1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: May 13, 2015 at 03:26 PM
--- Server version: 5.6.20
--- PHP Version: 5.5.15
+-- Client :  127.0.0.1
+-- Généré le :  Jeu 21 Mai 2015 à 17:38
+-- Version du serveur :  5.6.20
+-- Version de PHP :  5.5.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `qlsinhvien`
+-- Base de données :  `qlsinhvien`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `giaovien`
+-- Structure de la table `giaovien`
 --
 
 CREATE TABLE IF NOT EXISTS `giaovien` (
@@ -37,12 +37,19 @@ CREATE TABLE IF NOT EXISTS `giaovien` (
   `GioiTinh` int(12) DEFAULT NULL,
   `ChucVu` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
   `MaKhoa` int(12) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `giaovien`
+--
+
+INSERT INTO `giaovien` (`idGiaoVien`, `TaiKhoan`, `MatKhau`, `HoTen`, `DiaChi`, `Email`, `DienThoai`, `GioiTinh`, `ChucVu`, `MaKhoa`) VALUES
+(1, 'vancntt', '123', 'Văn', 'abc', 'adsa@gmail.com', '21255346', 1, 'Giáo vụ', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `khoa`
+-- Structure de la table `khoa`
 --
 
 CREATE TABLE IF NOT EXISTS `khoa` (
@@ -51,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `khoa` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `khoa`
+-- Contenu de la table `khoa`
 --
 
 INSERT INTO `khoa` (`idKhoa`, `TenKhoa`) VALUES
@@ -60,39 +67,46 @@ INSERT INTO `khoa` (`idKhoa`, `TenKhoa`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `loaihinhdaotao`
+-- Structure de la table `loaihinhdaotao`
 --
 
 CREATE TABLE IF NOT EXISTS `loaihinhdaotao` (
 `idLoaiHinhDaoTao` int(12) unsigned NOT NULL,
   `TenLoaiHinhDaoTao` varchar(254) CHARACTER SET utf8 DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `loaihinhdaotao`
+--
+
+INSERT INTO `loaihinhdaotao` (`idLoaiHinhDaoTao`, `TenLoaiHinhDaoTao`) VALUES
+(1, 'Đại Học'),
+(2, 'Cao Đẳng');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lop`
+-- Structure de la table `lop`
 --
 
 CREATE TABLE IF NOT EXISTS `lop` (
 `idLop` int(10) unsigned NOT NULL,
   `TenLop` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
   `MaNganh` int(11) DEFAULT NULL,
-  `MaGVCN` int(11) DEFAULT NULL,
   `LoaiHinhDaoTao` varchar(50) CHARACTER SET utf8 DEFAULT NULL
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `lop`
+-- Contenu de la table `lop`
 --
 
-INSERT INTO `lop` (`idLop`, `TenLop`, `MaNganh`, `MaGVCN`, `LoaiHinhDaoTao`) VALUES
-(1, '05DHPM', 1, 1, 'Đại Học');
+INSERT INTO `lop` (`idLop`, `TenLop`, `MaNganh`, `LoaiHinhDaoTao`) VALUES
+(1, '05DHPM', 1, 'Đại Học');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Structure de la table `migrations`
 --
 
 CREATE TABLE IF NOT EXISTS `migrations` (
@@ -101,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Contenu de la table `migrations`
 --
 
 INSERT INTO `migrations` (`migration`, `batch`) VALUES
@@ -116,19 +130,26 @@ INSERT INTO `migrations` (`migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nganh`
+-- Structure de la table `nganh`
 --
 
 CREATE TABLE IF NOT EXISTS `nganh` (
 `idNganh` int(12) unsigned NOT NULL,
   `TenNganh` varchar(254) CHARACTER SET utf8 DEFAULT NULL,
   `MaKhoa` int(11) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `nganh`
+--
+
+INSERT INTO `nganh` (`idNganh`, `TenNganh`, `MaKhoa`) VALUES
+(1, 'Công Nghệ Phần Mềm', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password_resets`
+-- Structure de la table `password_resets`
 --
 
 CREATE TABLE IF NOT EXISTS `password_resets` (
@@ -137,10 +158,17 @@ CREATE TABLE IF NOT EXISTS `password_resets` (
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Contenu de la table `password_resets`
+--
+
+INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
+('hchihoang@gmail.com', '3c19cc7ddf2305aabfc862d2245bac0ddab39ab8286a52496932347ecc100ce5', '2015-05-20 08:56:56');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `quatrinhthuctap`
+-- Structure de la table `quatrinhthuctap`
 --
 
 CREATE TABLE IF NOT EXISTS `quatrinhthuctap` (
@@ -159,7 +187,7 @@ CREATE TABLE IF NOT EXISTS `quatrinhthuctap` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=38 ;
 
 --
--- Dumping data for table `quatrinhthuctap`
+-- Contenu de la table `quatrinhthuctap`
 --
 
 INSERT INTO `quatrinhthuctap` (`idQTTT`, `MaSinhVien`, `MaThucTap`, `NgayThucTap`, `KinhDoSang`, `ViDoSang`, `ThoiGianSang`, `KinhDoChieu`, `ViDoChieu`, `ThoiGianChieu`, `GhiChuSang`, `GhiChuChieu`) VALUES
@@ -174,7 +202,7 @@ INSERT INTO `quatrinhthuctap` (`idQTTT`, `MaSinhVien`, `MaThucTap`, `NgayThucTap
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sinhvien`
+-- Structure de la table `sinhvien`
 --
 
 CREATE TABLE IF NOT EXISTS `sinhvien` (
@@ -193,22 +221,21 @@ CREATE TABLE IF NOT EXISTS `sinhvien` (
   `NgaySinh` date DEFAULT NULL,
   `NoiSinh` text CHARACTER SET utf8,
   `MaLop` int(11) DEFAULT NULL,
-  `MaLoaiHinh` int(11) DEFAULT NULL,
   `Avatar` text CHARACTER SET utf8
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COMMENT='SinhVien' AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `sinhvien`
+-- Contenu de la table `sinhvien`
 --
 
-INSERT INTO `sinhvien` (`id`, `HoTen`, `DiaChi`, `QuanHuyen`, `TinhTP`, `Email`, `GioiTinh`, `MSSV`, `Password`, `KeyID`, `SDT`, `DanToc`, `NgaySinh`, `NoiSinh`, `MaLop`, `MaLoaiHinh`, `Avatar`) VALUES
-(1, '', '', '', '', '', 0, 123, '123', '', '', '', '0000-00-01', '', 0, 0, NULL),
-(2, 'Dương Chí Hoàng', 'C3/26H', 'Bình Hưng', 'Bình Chánh', 'hchihoang@gmail.com', 0, 1, '12', '353836067805663', '01653158426', '', '1993-11-05', '', 1, 0, 'http://hchihoang.byethost7.com/BlueEyes/uploads/IMG_7676633533846.jpeg');
+INSERT INTO `sinhvien` (`id`, `HoTen`, `DiaChi`, `QuanHuyen`, `TinhTP`, `Email`, `GioiTinh`, `MSSV`, `Password`, `KeyID`, `SDT`, `DanToc`, `NgaySinh`, `NoiSinh`, `MaLop`, `Avatar`) VALUES
+(1, '', '', '', '', '', 0, 123, '123', '', '', '', '0000-00-01', '', 0, NULL),
+(2, 'Dương Chí Hoàng', 'C3/26H Phạm Hùng,Bình Hưng', 'Bình Chánh', 'TP.HCM', 'hchihoang@gmail.com', 0, 1, '12', '353836067805663', '01653158426', '', '1993-11-05', '', 1, 'http://hchihoang.byethost7.com/BlueEyes/uploads/IMG_7676633533846.jpeg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `thoigianthuctap`
+-- Structure de la table `thoigianthuctap`
 --
 
 CREATE TABLE IF NOT EXISTS `thoigianthuctap` (
@@ -217,12 +244,19 @@ CREATE TABLE IF NOT EXISTS `thoigianthuctap` (
   `NamThucTap` text,
   `NgayBatDau` date DEFAULT NULL,
   `NgayKetThuc` date DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `thoigianthuctap`
+--
+
+INSERT INTO `thoigianthuctap` (`idThoiGianThucTap`, `MaKhoa`, `NamThucTap`, `NgayBatDau`, `NgayKetThuc`) VALUES
+(1, 1, '2014 - 2015', '2015-01-01', '2015-03-23');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `thongbao`
+-- Structure de la table `thongbao`
 --
 
 CREATE TABLE IF NOT EXISTS `thongbao` (
@@ -231,20 +265,21 @@ CREATE TABLE IF NOT EXISTS `thongbao` (
   `NoiDung` text CHARACTER SET utf8,
   `NgayDang` date DEFAULT NULL,
   `Khoa` int(11) DEFAULT NULL
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `thongbao`
+-- Contenu de la table `thongbao`
 --
 
 INSERT INTO `thongbao` (`id`, `TieuDe`, `NoiDung`, `NgayDang`, `Khoa`) VALUES
 (1, 'Nộp báo cáo thực tập', 'Nộp báo cáo thực tập ngày 23/3/2015', '2015-01-01', 1),
-(2, 'Nộp báo cáo tốt nghiệp', 'Hạn chót nộp báo cáo tốt nghiệp là ngày 23/4/2015', '2015-01-01', 1);
+(2, 'Nộp báo cáo tốt nghiệp', 'Hạn chót nộp báo cáo tốt nghiệp là ngày 23/4/2015', '2015-01-01', 1),
+(3, 'test', 'abc', '2015-05-15', 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `thuctap`
+-- Structure de la table `thuctap`
 --
 
 CREATE TABLE IF NOT EXISTS `thuctap` (
@@ -258,7 +293,7 @@ CREATE TABLE IF NOT EXISTS `thuctap` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `thuctap`
+-- Contenu de la table `thuctap`
 --
 
 INSERT INTO `thuctap` (`idThucTap`, `MaSinhVien`, `MaThoiGianThucTap`, `CongTyThucTap`, `DiaChiCongTyThucTap`, `KinhDoCongTyThucTap`, `ViDoCongTyThucTap`) VALUES
@@ -267,7 +302,7 @@ INSERT INTO `thuctap` (`idThucTap`, `MaSinhVien`, `MaThoiGianThucTap`, `CongTyTh
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Structure de la table `users`
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
@@ -278,150 +313,151 @@ CREATE TABLE IF NOT EXISTS `users` (
   `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `users`
+-- Contenu de la table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Nguyễn Hữu Hiển', 'nguyenhuuhientv@gmail.com', '$2y$10$cR1gVq.cmnwB9i025WdbYutxK2nrCBoioXVyNc2K5pRCsZq0pHt3a', 'Qz1jbWTLZBTzqa72Jg1UiMLMTSgLEUkpIdhcGPVq9gtQRY3bU1cFKMwjpiJW', '2015-03-22 01:18:40', '2015-05-13 02:13:56');
+(1, 'Nguyễn Hữu Hiển', 'nguyenhuuhientv@gmail.com', '$2y$10$cR1gVq.cmnwB9i025WdbYutxK2nrCBoioXVyNc2K5pRCsZq0pHt3a', 'X2m1ifIsCfj9gJBT5zsGgWrnw7CwEa3Kw9jI04S36sPrC6ySL7EYgedKUTtu', '2015-03-22 01:18:40', '2015-05-20 08:45:04'),
+(2, 'Chí Hoàng', 'hchihoang@gmail.com', '$2y$10$.9XWi6oJWup6zu.gAsIFvuQOIQdIgKcJ2TZnkwSqm3EM/9ABa2C16', 'Iqk0p8MJg2WmvGHTNcxfA5txemrle4TRwHJNWcLOLAssuWbFtPhMYBQ8RKYd', '2015-05-20 08:46:46', '2015-05-20 08:56:08');
 
 --
--- Indexes for dumped tables
+-- Index pour les tables exportées
 --
 
 --
--- Indexes for table `giaovien`
+-- Index pour la table `giaovien`
 --
 ALTER TABLE `giaovien`
  ADD PRIMARY KEY (`idGiaoVien`);
 
 --
--- Indexes for table `khoa`
+-- Index pour la table `khoa`
 --
 ALTER TABLE `khoa`
  ADD PRIMARY KEY (`idKhoa`);
 
 --
--- Indexes for table `loaihinhdaotao`
+-- Index pour la table `loaihinhdaotao`
 --
 ALTER TABLE `loaihinhdaotao`
  ADD PRIMARY KEY (`idLoaiHinhDaoTao`);
 
 --
--- Indexes for table `lop`
+-- Index pour la table `lop`
 --
 ALTER TABLE `lop`
  ADD PRIMARY KEY (`idLop`), ADD UNIQUE KEY `MaLop` (`idLop`);
 
 --
--- Indexes for table `nganh`
+-- Index pour la table `nganh`
 --
 ALTER TABLE `nganh`
  ADD PRIMARY KEY (`idNganh`);
 
 --
--- Indexes for table `password_resets`
+-- Index pour la table `password_resets`
 --
 ALTER TABLE `password_resets`
  ADD KEY `password_resets_email_index` (`email`), ADD KEY `password_resets_token_index` (`token`);
 
 --
--- Indexes for table `quatrinhthuctap`
+-- Index pour la table `quatrinhthuctap`
 --
 ALTER TABLE `quatrinhthuctap`
  ADD PRIMARY KEY (`idQTTT`);
 
 --
--- Indexes for table `sinhvien`
+-- Index pour la table `sinhvien`
 --
 ALTER TABLE `sinhvien`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `thoigianthuctap`
+-- Index pour la table `thoigianthuctap`
 --
 ALTER TABLE `thoigianthuctap`
  ADD PRIMARY KEY (`idThoiGianThucTap`);
 
 --
--- Indexes for table `thongbao`
+-- Index pour la table `thongbao`
 --
 ALTER TABLE `thongbao`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `thuctap`
+-- Index pour la table `thuctap`
 --
 ALTER TABLE `thuctap`
  ADD PRIMARY KEY (`idThucTap`);
 
 --
--- Indexes for table `users`
+-- Index pour la table `users`
 --
 ALTER TABLE `users`
  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables exportées
 --
 
 --
--- AUTO_INCREMENT for table `giaovien`
+-- AUTO_INCREMENT pour la table `giaovien`
 --
 ALTER TABLE `giaovien`
-MODIFY `idGiaoVien` int(12) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `idGiaoVien` int(12) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `khoa`
+-- AUTO_INCREMENT pour la table `khoa`
 --
 ALTER TABLE `khoa`
 MODIFY `idKhoa` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `loaihinhdaotao`
+-- AUTO_INCREMENT pour la table `loaihinhdaotao`
 --
 ALTER TABLE `loaihinhdaotao`
-MODIFY `idLoaiHinhDaoTao` int(12) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `idLoaiHinhDaoTao` int(12) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `lop`
+-- AUTO_INCREMENT pour la table `lop`
 --
 ALTER TABLE `lop`
 MODIFY `idLop` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `nganh`
+-- AUTO_INCREMENT pour la table `nganh`
 --
 ALTER TABLE `nganh`
-MODIFY `idNganh` int(12) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `idNganh` int(12) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `quatrinhthuctap`
+-- AUTO_INCREMENT pour la table `quatrinhthuctap`
 --
 ALTER TABLE `quatrinhthuctap`
 MODIFY `idQTTT` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=38;
 --
--- AUTO_INCREMENT for table `sinhvien`
+-- AUTO_INCREMENT pour la table `sinhvien`
 --
 ALTER TABLE `sinhvien`
 MODIFY `id` int(15) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `thoigianthuctap`
+-- AUTO_INCREMENT pour la table `thoigianthuctap`
 --
 ALTER TABLE `thoigianthuctap`
-MODIFY `idThoiGianThucTap` int(12) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `idThoiGianThucTap` int(12) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `thongbao`
+-- AUTO_INCREMENT pour la table `thongbao`
 --
 ALTER TABLE `thongbao`
-MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `thuctap`
+-- AUTO_INCREMENT pour la table `thuctap`
 --
 ALTER TABLE `thuctap`
 MODIFY `idThucTap` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
