@@ -13,7 +13,7 @@
                             <tr>
                                 <th>Mã Sinh Viên</th>
                                 <th>Tên Sinh Viên</th>
-								<!-- <th>Mã Thực Tập</th> -->
+								<th>Lớp</th>
 								<th>Ngày Thực Tập</th>
 								<th>Điểm Danh Sáng</th>
 								<th>Điểm Danh Chiều</th>
@@ -25,7 +25,7 @@
 						<tr>
 							<td>{{$item->MaSinhVien}}</td>
 							<td>{{$item->SinhVien->HoTen}}</td>
-							<!-- <td>{{$item->MaThucTap}}</td> -->
+							<td>{{$item->NgayThucTap}}</td>
 							<td>{{$item->NgayThucTap}}</td>
 							<td>
 								@if ($item->ThoiGianSang)
