@@ -88,8 +88,8 @@
 
             function showCurrentLocation2(position)
             {
-                var latitude = {{$info->KinhDoChieu}};
-                var longitude = {{$info->ViDoChieu}};
+                var latitude = {{$info->SinhVien->ThucTap->KinhDoCongTyThucTap}};
+                var longitude = {{$info->SinhVien->ThucTap->ViDoCongTyThucTap}};
                 var coords = new google.maps.LatLng(latitude, longitude);
 
                 var mapOptions = {
@@ -142,11 +142,11 @@
 				<div class="panel-body" style="height: 230px">									
 					<div class="row">
 						<label class="col-md-6">Tên công ty, xý nghiệp: </label>
-						<span class="col-md-6">{{$info->SinhVien->HoTen}}</span>
+						<span class="col-md-6">{{$info->SinhVien->ThucTap->CongTyThucTap}}</span>
 					</div>
 					<div class="row">
 						<label class="col-md-6">Địa chỉ: </label>
-						<span class="col-md-6">{{$info->SinhVien->HoTen}}</span>
+						<span class="col-md-6">{{$info->SinhVien->ThucTap->DiaChiCongTyThucTap}}</span>
 					</div>
 				</div>
         	</div>

@@ -26,4 +26,8 @@ class SinhVien extends Model {
 	public function QuaTrinhThucTap() {
 		return $this->hasMany("QuaTrinhThucTap", "MaSinhVien");
 	}
+
+	public function ThucTap() {
+		return $this->hasOne("\App\ThucTap", "MaSinhVien");
+	}
 }

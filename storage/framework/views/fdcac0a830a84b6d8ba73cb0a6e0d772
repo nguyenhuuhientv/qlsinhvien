@@ -11,7 +11,7 @@
                             <tr>
                                 <th>Mã Sinh Viên</th>
                                 <th>Tên Sinh Viên</th>
-								<!-- <th>Mã Thực Tập</th> -->
+								<th>Lớp</th>
 								<th>Ngày Thực Tập</th>
 								<th>Điểm Danh Sáng</th>
 								<th>Điểm Danh Chiều</th>
@@ -23,7 +23,7 @@
 						<tr>
 							<td><?php echo e($item->MaSinhVien); ?></td>
 							<td><?php echo e($item->SinhVien->HoTen); ?></td>
-							<!-- <td><?php echo e($item->MaThucTap); ?></td> -->
+							<td><?php echo e($item->NgayThucTap); ?></td>
 							<td><?php echo e($item->NgayThucTap); ?></td>
 							<td>
 								<?php if($item->ThoiGianSang): ?>

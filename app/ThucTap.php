@@ -9,7 +9,7 @@ class ThucTap extends Model {
 	 *
 	 * @var string
 	 */
-	protected $table = 'ThucTap';
+	protected $table = 'thuctap';
 
 	/**
 	 * The attributes that are mass assignable.
