@@ -23,7 +23,7 @@
 						<tr>
 							<td><?php echo e($item->MaSinhVien); ?></td>
 							<td><?php echo e($item->SinhVien->HoTen); ?></td>
-							<td><?php echo e($item->NgayThucTap); ?></td>
+							<td><?php echo e($item->SinhVien->Lop->TenLop); ?></td>
 							<td><?php echo e($item->NgayThucTap); ?></td>
 							<td>
 								<?php if($item->ThoiGianSang): ?>

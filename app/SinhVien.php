@@ -30,4 +30,8 @@ class SinhVien extends Model {
 	public function ThucTap() {
 		return $this->hasOne("\App\ThucTap", "MaSinhVien");
 	}
+
+	public function Lop() {
+		return $this->hasOne("\App\Lop", "idLop");
+	}
 }

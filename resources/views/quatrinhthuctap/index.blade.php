@@ -25,7 +25,7 @@
 						<tr>
 							<td>{{$item->MaSinhVien}}</td>
 							<td>{{$item->SinhVien->HoTen}}</td>
-							<td>{{$item->NgayThucTap}}</td>
+							<td>{{$item->SinhVien->Lop->TenLop}}</td>
 							<td>{{$item->NgayThucTap}}</td>
 							<td>
 								@if ($item->ThoiGianSang)
