@@ -157,7 +157,7 @@
 	<div class="row">
 		<div class="col-md-6">
 			<div class="panel panel-default">
-				<div class="panel-heading">Thông tin chi tiết sáng #{{$info->NgayThucTap}}</div>
+				<div class="panel-heading">Thông tin chi tiết sáng #{{$info->NgayThucTap}} - {{$info->ThoiGianSang}}</div>
 
 				<div class="panel-body">
 					<div id="mapPlaceholder" class="col-md-12"></div>
@@ -173,7 +173,7 @@
 
         <div class="col-md-6">
 			<div class="panel panel-default">
-				<div class="panel-heading">Thông tin chi tiết chiều #{{$info->NgayThucTap}}</div>
+				<div class="panel-heading">Thông tin chi tiết chiều #{{$info->NgayThucTap}} - {{$info->ThoiGianChieu}}</div>
 
 				<div class="panel-body">
 					<div id="mapPlaceholder2" class="col-md-12"></div>
